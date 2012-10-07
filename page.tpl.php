@@ -15,6 +15,9 @@
             'class' => array('element-invisible'),
           ),
         )); ?>
+        <?php print render(drupal_get_form('search_block_form')); ?> 
+
+        <?php print render($page['navbar']); ?>
       </div>
     </div>
   </div><!-- /#main-menu -->

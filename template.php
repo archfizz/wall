@@ -99,9 +99,11 @@ function wall_menu_link__menu_artwork_medium_types($variables) {
 
 function wall_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
+    $form['search_block_form']['#title_display'] = 'invisible';
     // $form['actions']['submit']['#value'] = t('Search >');
     $form['search_block_form']['#attributes']['class'][] = 'input-medium';
-    $form['actions']['submit']['#attributes']['class'][] = 'btn btn-primary';
+    $form['#attributes']['class'][] = 'navbar-form pull-right';
+    $form['actions']['submit']['#attributes']['class'][] = 'btn';
     $form['search_block_form']['#attributes']['placeholder'] = t('Search');
   }
-} 
+}

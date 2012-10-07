@@ -21,13 +21,24 @@
 <?php endif; ?>
 
 <header class="header container">
-  <h1><?php print $title;  ?></h1>
-  <?php print render($page['header']); ?>
+  <h1><?php print $title; ?></h1>
+  <?php //print render($page['header']); ?>
 </header>
 
-<div style="background:<?php echo $background; ?>;">
+<div style="background:<?php // echo $background; ?>;">
   <div class="container">
-    <?php print render($page['content']); ?>
+    <div class="row">
+      <?php if ($page['sidebar_first']): ?>
+      <div id="sidebar-first" class="column sidebar span4">
+        <div class="section">
+          <?php print render($page['sidebar_first']); ?>
+        </div>
+      </div> <!-- /.section, /#sidebar-first -->
+      <?php endif; ?>
+      <div class="span8">
+        <?php print render($page['content']); ?>
+      </div>
+    </div>
   </div>
 </div>
 

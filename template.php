@@ -60,34 +60,24 @@ function wall_preprocess_page(&$variables) {
   );
 }
 
+/*
 function wall_preprocess_block(&$variables) {
   if (in_array('block-menu', $variables['classes_array'])) {
       $variables['classes_array'][] = 'span6';
   }
+}*/
+
+function wall_menu_tree__menu_artwork_galleries($variables) {
+  return '<ul class="nav nav-pills nav-stacked" id="browse-artwork-galleries">' . $variables['tree'] . '</ul>';
 }
 
-/*
-function wall_links__system_main_menu()
-{
-    if (isset($link['href'])) {
-      // Pass in $link as $options, they share the same keys.
-      $link['html'] = TRUE;
-      $output .= l('<span>'. check_plain($link['title']) .'</span>', $link['href'], $link);
-    }
-}
-*/
+function wall_menu_link__menu_artwork_galleries($variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
 
-/*
-function wall_links__system_main_menu($variables)
-{
-    $html = "<div>\n";
-    $html .= "  <ul>\n"; 
-    foreach ($variables['links'] as $link) {
-        $html .= "<li>".l($link['title'], $link['path'], $link)."</li>";
-    }
-    $html .= "  </ul>\n";
-    $html .= "</div>\n";
-
-    return $html;
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
-*/

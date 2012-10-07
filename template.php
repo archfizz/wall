@@ -22,7 +22,7 @@ function wall_preprocess_page(&$variables)
       : array('brand');
 
     $variables['navbarHomePageLink'] = l(
-      t($variables['site_name']), '/', array('attributes' => array(
+      t($variables['site_name']), 'node', array('attributes' => array(
         'class' => $navbarHomePageLinkClasses
       ))
     );

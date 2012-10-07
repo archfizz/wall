@@ -1,15 +1,15 @@
-name = The Wall
-description = Custom Theme for MichelleBaharier.co.uk
+name = On The Wall
+description = Version 1 of custom theme for MichelleBaharier.co.uk
 core = 7.x
 
 stylesheets[all][0] = bootstrap/css/bootstrap.min.css
-;stylesheets[all][1] = assets/css/bootstrap.mb2.css
-;stylesheets[all][2] = assets/css/bootstrap-responsive.css
+; stylesheets[all][1] = assets/css/bootstrap.mb2.css
+; stylesheets[all][2] = assets/css/bootstrap-responsive.css
 
-;stylesheets[all][3] = assets/css/style.css
+; stylesheets[all][3] = assets/css/style.css
 
-;scripts[all][0] = assets/js/plugins.js
-;scripts[all][1] = assets/js/main.js
+; scripts[all][0] = assets/js/plugins.js
+; scripts[all][1] = assets/js/main.js
 
 ; regions[header] = Header
 ; regions[help] = Help

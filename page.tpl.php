@@ -1,30 +1,31 @@
 <?php if ($main_menu): ?>
-  <div id="main-menu" class="navigation navbar">
-    <div class="navbar-inner">
-      <div class="container container-navbar-fix">
-        <?php print $navbarHomePageLink; ?>
-        <?php print theme('links__system_main_menu', array(
-          'links' => $main_menu,
-          'attributes' => array(
-            'id' => 'main-menu-links',
-            'class' => array('links nav', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => t('Main menu'),
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
-        <?php print render(drupal_get_form('search_block_form')); ?> 
-
-        <?php print render($page['navbar']); ?>
-      </div>
+<div id="main-menu" class="navigation navbar navbar-static-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <?php print $navbarHomePageLink; ?>
+      <?php print theme('links__system_main_menu', array(
+        'links' => $main_menu,
+        'attributes' => array(
+          'id' => 'main-menu-links',
+          'class' => array('links nav', 'clearfix'),
+        ),
+        'heading' => array(
+          'text' => t('Main menu'),
+          'level' => 'h2',
+          'class' => array('element-invisible'),
+        ),
+      )); ?>
+      <?php $searchForm = drupal_get_form('search_block_form'); print render($searchForm); ?> 
+      <?php //print render($page['navbar']); ?>
     </div>
-  </div><!-- /#main-menu -->
+  </div>
+</div><!-- /#main-menu -->
 <?php endif; ?>
 
 <header class="header container">
-  <h1><?php print $title; ?></h1>
+  <div class="page-header">
+    <h1><?php print $title; ?></h1>
+  </div>
   <?php //print render($page['header']); ?>
 </header>
 

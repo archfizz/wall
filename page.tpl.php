@@ -2,7 +2,7 @@
   <div id="main-menu" class="navigation navbar">
     <div class="navbar-inner">
       <div class="container container-navbar-fix">
-        <a class="brand" href="/" <?php if( $logo != false ): ?>style="background:url(../img/<?php echo $logo; ?>) no-repeat 10px 8px;height:25px;width:130px;"<?php endif; ?>><?php if( $logo == false ){ echo $site_name; } ?></a>
+        <?php print $navbarHomePageLink; ?>
         <?php print theme('links__system_main_menu', array(
           'links' => $main_menu,
           'attributes' => array(

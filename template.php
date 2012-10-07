@@ -17,7 +17,17 @@ function wall_process_page(&$variables)
 
 function wall_preprocess_page(&$variables)
 {
-     $variables['footer_scripts'] = array(
+    $navbarHomePageLinkClasses = $variables['hide_site_name'] 
+      ? array('brand', 'navbar-logo')
+      : array('brand');
+
+    $variables['navbarHomePageLink'] = l(
+      t($variables['site_name']), '/', array('attributes' => array(
+        'class' => $navbarHomePageLinkClasses
+      ))
+    );
+
+    $variables['footer_scripts'] = array(
         '/sites/all/themes/wall/js/libs/bootstrap/bootstrap.min.js',
         '/sites/all/themes/wall/js/libs/bootstrap/carousel.js',
         '/sites/all/themes/wall/js/libs/bootstrap/dropdown.js',

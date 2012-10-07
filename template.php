@@ -82,6 +82,21 @@ function wall_menu_link__menu_artwork_galleries($variables) {
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
+function wall_menu_tree__menu_artwork_medium_types($variables) {
+  return '<ul class="nav nav-pills nav-stacked" id="browse-artwork-medium-types">' . $variables['tree'] . '</ul>';
+}
+
+function wall_menu_link__menu_artwork_medium_types($variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    $sub_menu = drupal_render($element['#below']);
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
 function wall_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
     // $form['actions']['submit']['#value'] = t('Search >');

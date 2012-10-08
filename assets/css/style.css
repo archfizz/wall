@@ -1,0 +1,17 @@
+
+/* ===== Primary Styles ========================================================
+   Author: Adam Elsodaney
+   ========================================================================== */
+
+@import url(font.css);
+
+body {
+    background: #762646;
+    color: #ccc;
+}
+
+h1, h2, h3, h4, h5, h6, a.brand {
+  font-family: 'MegalopolisExtraRegular' !important;
+}
+
+/*#d4a539*/

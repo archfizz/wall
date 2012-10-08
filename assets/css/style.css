@@ -14,4 +14,8 @@ h1, h2, h3, h4, h5, h6, a.brand {
   font-family: 'MegalopolisExtraRegular' !important;
 }
 
+.navbar .form-actions {
+  padding: 0;
+}
+
 /*#d4a539*/

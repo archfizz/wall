@@ -29,7 +29,7 @@
   <?php //print render($page['header']); ?>
 </header>
 
-<div style="background:<?php // echo $background; ?>;">
+<div<?php // echo " style=\"background: $background;\";?>>
   <div class="container">
     <div class="row">
       <?php if ($page['sidebar_first']): ?>

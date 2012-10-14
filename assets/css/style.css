@@ -17,7 +17,12 @@ h1, h2, h3, h4, h5, h6, a.brand {
 a { color: #7ac919; }
 
 ul.nav-pills li.leaf {
-  list-style-image: none !important;
+  list-style-image: none;
+  list-style-type: none;
+}
+
+.nav-pills > li > a {
+  background-color: #7b0836;
 }
 
 .nav-pills > li > a:hover {
@@ -55,6 +60,11 @@ ul.nav-pills li.leaf {
 .node-artwork.node-teaser h4 {
   text-align: center;
   font-size: 0.7em;
+}
+
+.pager a, .pager span {
+  background-color: #7b0836;
+  border-color: #8e3156;
 }
 
 /*#d4a539*/

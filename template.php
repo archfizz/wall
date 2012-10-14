@@ -12,13 +12,13 @@ function wall_process_page(&$variables) {
 }
 
 function wall_preprocess_page(&$variables) {
-  $navbarHomePageLinkClasses = $variables['hide_site_name'] 
+  $navbar_homepage_link_classes = $variables['hide_site_name'] 
     ? array('brand', 'navbar-logo')
     : array('brand');
 
-  $variables['navbarHomePageLink'] = l(
+  $variables['navbar_homepage_link'] = l(
     t($variables['site_name']), 'node', array('attributes' => array(
-      'class' => $navbarHomePageLinkClasses
+      'class' => $navbar_homepage_link_classes
     ))
   );
 
@@ -58,14 +58,29 @@ function wall_preprocess_page(&$variables) {
     'LinkedIn'  => 'http://linkedin.com/',
     'Twitter'   => 'http://twitter.com/'
   );
+
+  /*if (isset($vars['node']->type)) {
+    $variables['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
+  }*/
 }
+
+/**
+ *  Override the html for Artwork node
+ *
+function wall_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  if ($node->type == 'artwork') {
+    $variables['theme_hook_suggestion'] = 'node__artwork';
+  }
+}*/
 
 /*
 function wall_preprocess_block(&$variables) {
   if (in_array('block-menu', $variables['classes_array'])) {
       $variables['classes_array'][] = 'span6';
   }
-}*/
+}
+*/
 
 function wall_menu_tree__menu_artwork_galleries($variables) {
   return '<ul class="nav nav-pills nav-stacked" id="browse-artwork-galleries">' . $variables['tree'] . '</ul>';
@@ -101,9 +116,9 @@ function wall_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_block_form') {
     $form['search_block_form']['#title_display'] = 'invisible';
     // $form['actions']['submit']['#value'] = t('Search >');
-    $form['search_block_form']['#attributes']['class'][] = 'input-medium';
+    $form['search_block_form']['#attributes']['class'][] = 'input-medium search-query';
     $form['#attributes']['class'][] = 'navbar-form pull-right';
-    $form['actions']['submit']['#attributes']['class'][] = 'btn';
+    $form['actions']['submit']['#attributes']['class'][] = 'element-invisible btn';
     $form['search_block_form']['#attributes']['placeholder'] = t('Search');
   }
 }

@@ -2,7 +2,7 @@
 <div id="main-menu" class="navigation navbar navbar-static-top">
   <div class="navbar-inner">
     <div class="container">
-      <?php print $navbarHomePageLink; ?>
+      <?php print $navbar_homepage_link; ?>
       <?php print theme('links__system_main_menu', array(
         'links' => $main_menu,
         'attributes' => array(
@@ -15,7 +15,7 @@
           'class' => array('element-invisible'),
         ),
       )); ?>
-      <?php $searchForm = drupal_get_form('search_block_form'); print render($searchForm); ?> 
+      <?php $search_form = drupal_get_form('search_block_form'); print render($search_form); ?> 
       <?php //print render($page['navbar']); ?>
     </div>
   </div>

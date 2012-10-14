@@ -33,13 +33,13 @@
   <div class="container">
     <div class="row">
       <?php if ($page['sidebar_first']): ?>
-      <div id="sidebar-first" class="column sidebar span4">
+      <div id="sidebar-first" class="column sidebar span3">
         <div class="section">
           <?php print render($page['sidebar_first']); ?>
         </div>
       </div> <!-- /.section, /#sidebar-first -->
       <?php endif; ?>
-      <div class="span8">
+      <div id="main-content" class="span9">
         <?php print render($page['content']); ?>
       </div>
     </div>

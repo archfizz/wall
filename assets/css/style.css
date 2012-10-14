@@ -14,6 +14,17 @@ h1, h2, h3, h4, h5, h6, a.brand {
   font-family: 'MegalopolisExtraRegular' !important;
 }
 
+a { color: #7ac919; }
+
+ul.nav-pills li.leaf {
+  list-style-image: none !important;
+}
+
+.nav-pills > li > a:hover {
+  background-color: #000;
+  color: #c6d81b;
+}
+
 .navbar .form-actions {
   padding: 0;
 }

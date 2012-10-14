@@ -2,7 +2,8 @@
 
 /**
  * @file
- * Default theme implementation to display a block.
+ * Custom theme implementation to display a block.
+ * The HTML is based on the default except <h2> is replaced with <h3> 
  *
  * Available variables:
  * - $block->subject: Block title.

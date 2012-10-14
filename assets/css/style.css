@@ -44,6 +44,10 @@ ul.nav-pills li.leaf {
 */
 }
 
+.page-middle {
+  background: url(../img/mb-wall-4d0c26.png);
+}
+
 .node-artwork {
   background: #000;
   color: #ccc;

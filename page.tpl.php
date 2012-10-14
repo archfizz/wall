@@ -47,8 +47,20 @@
 </div>
 
 <div class="container">
-  <hr>
   <footer>
     <small>&copy; 2007 - <?php echo date('Y'); ?> :: <?php print $site_name; ?></small>
+    <?php if ($page['footer_firstcolumn'] || $page['footer_secondcolumn'] || $page['footer_thirdcolumn']): ?>
+    <div class="row">
+      <div class="span4">
+        <?php print render($page['footer_firstcolumn']); ?>
+      </div>
+      <div class="span4">
+        <?php print render($page['footer_secondcolumn']); ?>
+      </div>
+      <div class="span4">
+        <?php print render($page['footer_thirdcolumn']); ?>
+      </div>
+    </div>
+    <?php endif; ?>
   </footer>
 </div> <!-- /container -->

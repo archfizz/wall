@@ -5,6 +5,20 @@
 
 @import url(font.css);
 
+@media (max-width: 767px) {
+  body {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  #main-menu {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  ul.nav-pills.nav-stacked li {
+    margin-left: 10px;
+  }
+}
+
 body {
     background: #762646;
     color: #ccc;

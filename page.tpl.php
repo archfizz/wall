@@ -22,7 +22,10 @@
         ),
       )); ?>
 
-      <?php $search_form = drupal_get_form('search_block_form'); print render($search_form); ?> 
+      <?php
+        $search_form = drupal_get_form('search_block_form');
+        print render($search_form);
+      ?> 
       </div>
       <?php //print render($page['navbar']); ?>
     </div>

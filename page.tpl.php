@@ -2,7 +2,13 @@
 <div id="main-menu" class="navigation navbar navbar-static-top">
   <div class="navbar-inner">
     <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
       <?php print $navbar_homepage_link; ?>
+      <div class="nav-collapse">
       <?php print theme('links__system_main_menu', array(
         'links' => $main_menu,
         'attributes' => array(
@@ -15,7 +21,9 @@
           'class' => array('element-invisible'),
         ),
       )); ?>
+
       <?php $search_form = drupal_get_form('search_block_form'); print render($search_form); ?> 
+      </div>
       <?php //print render($page['navbar']); ?>
     </div>
   </div>

@@ -9,6 +9,7 @@ stylesheets[all][2] = assets/css/style.css
 ; stylesheets[all][1] = assets/css/bootstrap.mb2.css
 
 
+scripts[0] = bootstrap/js/bootstrap.min.js
 ; scripts[all][0] = assets/js/plugins.js
 ; scripts[all][1] = assets/js/main.js
 

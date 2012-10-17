@@ -17,8 +17,6 @@
     
     <?php /* Place favicon.ico and apple-touch-icon.png in the root directory */ ?>
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.6.1.min.js"></script>
   </head>
   <body class="<?php print $classes; ?>" <?php print $attributes;?>>

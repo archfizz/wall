@@ -102,19 +102,16 @@ ul.nav-pills li.leaf {
 }
 
 .page-middle {
-  background: url(../img/mb-wall-4d0c26.png);
+  background: #4d0c26 url(../img/mb-wall-4d0c26.png);
 }
 
-.node-teaser.node-artwork {
+.node-artwork.node-teaser {
   background: #000;
   color: #ccc;
   padding: 0 5px 10px 5px;
   -webkit-border-radius: 10px;
      -moz-border-radius: 10px;
           border-radius: 10px;
-}
-
-.node-artwork.node-teaser {
   margin-bottom: 5px;
 }
 

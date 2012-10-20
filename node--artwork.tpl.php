@@ -1,4 +1,8 @@
-<?php // use if ($teaser) or ($page) to specify displays ?>
+<?php
+  // use if ($teaser) or ($page) to specify displays
+  $show_links = FALSE;
+
+?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix <?php if (!$page): ?>span2<?php endif; ?>"<?php print $attributes; ?>>
 
@@ -34,7 +38,7 @@
     }
     // Only display the wrapper div if there are links.
     $links = render($content['links']);
-    if ($links):
+    if ($links && $show_links):
   ?>
     <div class="link-wrapper">
       <?php print $links; ?>
